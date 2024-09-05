@@ -1,0 +1,597 @@
+body {            /*basic style for a body of the project*/
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+  font-family: Poppins, Open Sans, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+#tablecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px auto;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  padding: 5px;
+  
+}
+#title{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -20px auto;
+  
+}
+
+
+
+#hydro {
+  font-size: 20px;  /*hydrogen style*/
+  padding: 14px;
+  text-align: center;
+  background-image: linear-gradient(50deg, rgb(167, 167, 167), #c6c6c6, white);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  left: -2px;
+  top: 7px;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.symbol {
+  align-items: center;
+  padding: 5px;
+  margin: 4px;
+}
+
+.atomicMass {
+  position: absolute;
+  left: -2px;
+  bottom: -7px;
+  padding: 4px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+#table1 {
+  padding: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Added for responsiveness */
+  border: none;
+}
+
+table tr td {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#table2 {
+  margin-top: 13px;
+  margin-left: 33px;
+  padding: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Added for responsiveness */
+}
+
+.litm {
+  background-color: #333;
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(17, 255, 0),
+    rgb(118, 244, 129),
+    white
+  );
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.be {
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(8, 201, 255),
+    rgb(106, 255, 253),
+    white
+  );
+  transition: all 0.3s ease;
+}
+
+.sc {
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(0, 110, 255),
+    rgb(120, 178, 255),
+    white
+  );
+  transition: all 0.3s ease;
+}
+
+.bo {
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(255, 179, 0),
+    rgb(241, 202, 113),
+    white
+  );
+  transition: all 0.3s ease;
+}
+
+.carbo {
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(255, 0, 0),
+    rgb(252, 89, 89),
+    white
+  );
+  transition: all 0.3s ease;
+}
+
+.alum {
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(123, 0, 255),
+    rgb(186, 126, 249),
+    white
+  );
+  transition: all 0.3s ease;
+}
+
+.Helium {
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  background-image: linear-gradient(
+    48.07deg,
+    rgba(41, 81, 52, 0.664),
+    rgba(175, 214, 186, 0.664),
+    rgba(206, 253, 218, 0.664),
+    white
+  );
+  transition: all 0.3s ease;
+}
+
+.lact {
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(204, 1, 255),
+    rgb(204, 1, 255),
+    white
+  );
+  transition: all 0.3s ease;
+}
+
+#table1 td.litm:hover,
+#table1 td.be:hover,
+#table1 td.sc:hover,
+#table1 td.bo:hover,
+#table1 td.carbo:hover,
+#table1 td.Helium:hover,
+#table1 td.alum:hover,
+#table2 td.lact:hover,
+#table1 td.lact:hover,
+#table1 td#hydro:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  z-index: 43;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #tablecontainer {
+    margin: 50px auto;
+    float: none;
+    margin-left: 0;
+  }
+  
+  table tr td {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .litm, .be, .sc, .bo, .carbo, .alum, .Helium, .lact {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #tablecontainer {
+    margin: 20px auto;
+    padding: 10px;
+  }
+  
+  table tr td {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .litm, .be, .sc, .bo, .carbo, .alum, .Helium, .lact {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+
+
+.table-details{
+  color: #c6c6c6;
+  position: absolute;
+  right: -394px; 
+  top: 10%; 
+  transform: translateY(-50%); 
+  background-color: coral; 
+  padding: 10px;
+  height: 300px;
+  width: 360px;
+  
+}
+
+.element-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    max-width: 250px; 
+    border-radius: 8px;
+    position: absolute;
+    right: -390px;
+    top: 10%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 200px;
+    font-family: Poppins, Open Sans, Helvetica, Arial, sans-serif;
+    background-image: linear-gradient(45deg, #88ff00, #b1ff15, #ffffff);
+    margin-top: 30px;
+}
+
+#aluminium-name {
+    font-size: 26px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(45deg, #FFFF00, #ffffff);
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#aluminium-image {
+    width: 230px; 
+    margin-bottom: 20px;
+    height: 200px;
+    border-radius:5px;
+    transition: all 0.4s ease;
+}
+
+.atomic-mass-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 20px; 
+}
+
+.atomic-mass-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease;
+      background-image: linear-gradient(45deg, #88ff00, #b1ff15, #ffffff);
+  color: #000000;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+#aluminium-atomic-mass-label-left,
+#aluminium-atomic-mass-value-left,
+#aluminium-atomic-mass-label-right,
+#aluminium-atomic-mass-value-right {
+    font-size: 18px;
+    margin: 0;
+    transition: all 0.4s ease;
+}
+
+#aluminium-description {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 8px;
+    max-width: 220px;
+    font-weight: 600;
+    font-family: Poppins, Open Sans, Helvetica, Arial, sans-serif;
+    padding: 10px;
+    border: none;
+  background-image: linear-gradient(45deg, #88ff00, #b1ff15, #ffffff);
+  color: #000000;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+  margin-left: 20px;
+
+}
+
+.highlight {
+    font-weight: bold;
+    color: #555;
+}
+
+@media (min-width: 768px) {
+    .element-container {
+        max-width: 320px;
+    }
+}
+
+
+/*footer*/
+.table-footer{
+  background-color:rgb(0, 0, 0);
+  color: #c6c6c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  text-align: center;
+  flex-direction: column;
+  height: 200px;
+  font-size: 10px;
+}
+
+
+.periodic-table-container {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+  margin-left: -90px;
+  margin-right: 40px;
+  gap: 3px;
+  width:125%;
+  place-items: center;
+  flex-wrap: nowrap;
+}
+
+.periodic-table-legend {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  font-size: 14px;
+}
+
+.periodic-table-legend div {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+#alkali-metals {
+    background-image: linear-gradient(
+    48.07deg,
+    rgb(17, 255, 0),
+    rgb(118, 244, 129),
+    white
+  );
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+
+
+#alkaline-earth-metals {
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(8, 201, 255),
+    rgb(106, 255, 253),
+    white
+  );
+
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+#transition-metals {
+    background-image: linear-gradient(
+    48.07deg,
+    rgb(0, 110, 255),
+    rgb(120, 178, 255),
+    white
+  );
+border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+#post-transition-metals {
+    background-image: linear-gradient(
+    48.07deg,
+    rgb(123, 0, 255),
+    rgb(186, 126, 249),
+    white
+  );
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+#metalloids {
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(255, 179, 0),
+    rgb(241, 202, 113),
+    white
+  );
+border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+#reactive-non-metals {
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(255, 0, 0),
+    rgb(252, 89, 89),
+    white
+  );
+border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+#noble-gases {
+  background-image: linear-gradient(
+    48.07deg,
+    rgba(41, 81, 52, 0.664),
+    rgba(175, 214, 186, 0.664),
+    rgba(206, 253, 218, 0.664),
+    white
+  );
+border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  
+}
+
+#actinides {
+  background-image: linear-gradient(
+    48.07deg,
+    rgb(204, 1, 255),
+    rgb(204, 1, 255),
+    white
+  );
+border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+
+#lanthanides {
+  background-color: #005792;
+  border: none;
+  cursor: pointer;
+}
+
+#unknown-properties {
+  background-color: #6c757d;
+  border: none;
+  cursor: pointer;
+}
+
+
+.highlight {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  z-index: 43;
+}
+
+#resetHighlight{
+  background: linear-gradient(40deg, rgb(255, 153, 0), white);
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 10px;
+  position: absolute;
+  top: -15px;
+  right: 100%;
+  font-weight: normal;
+  border: none;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+#alkali-metals,
+#alkaline-earth-metals,
+#transition-metals,
+#post-transition-metals,
+#metalloids,
+#reactive-non-metals,
+#noble-gases ,
+#actinides{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.table-footer{
+  background-color:rgb(240, 240, 240);
+  color: #393838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  clear: both;
+  margin-top:200px;
+  position: absolute;
+  bottom: -200px;
+  
+
+}
