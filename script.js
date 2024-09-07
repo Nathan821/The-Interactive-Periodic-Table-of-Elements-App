@@ -6,7 +6,7 @@ function playHoverSound() {
   hoverSound.currentTime = 0; 
   hoverSound.play();
 }
-
+/** Play click sound */
 
 function playClickSound() {
   clickSound.currentTime = 0; 
